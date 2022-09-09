@@ -1,0 +1,16 @@
+#Exit Mysql
+quit
+
+# Shows the current status of the repository 
+# untracked files, new files, changes to files, ...
+git status
+
+# Adds any new files to the repository
+git add .
+
+# Commits any changes
+# The text after the -m is a description of what the the changes are
+git commit -m "a message about what I did"
+
+# push sends the changes (updated files) to your github account
+git push
