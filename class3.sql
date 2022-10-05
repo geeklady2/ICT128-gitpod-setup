@@ -1,5 +1,5 @@
 CREATE DATABASE class3;
-USE DATABASE class3;
+USE class3;
 
 CREATE TABLE customers (
     customer_id INT NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT,
@@ -16,18 +16,32 @@ CREATE TABLE customers (
     credit_limit INT
 );
 
-INSERT INTO customers (first_name, last_name, city, country, sales_rep_employee_number)
-    VALUES '';
 
-CREATE TABLE order (
+CREATE TABLE orders (
     order_number INT NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT,
+    fk_customer_id INT NOT NULL,
     order_date DATETIME,
     required_date DATETIME,
     shipped_date DATETIME,
-    order_status,
-    comments,
-    FOREIGN KEY customer_id,
-        REFERENCES customers(customer_id),
+    order_status INT,
+    comments TEXT,
+    FOREIGN KEY (fk_customer_id)
+        REFERENCES customers(customer_id)
         ON DELETE CASCADE
 );
 
+INSERT INTO customers (last_name, city, country, sales_rep_employee_number)
+    VALUES ('Wolfe','Calgary', 'Canada', 53);
+INSERT INTO customers (fist_name, last_name, city, country, sales_rep_employee_number)
+    VALUES ('Margaret','Atwood','Calgary', 'Canada', 69);
+
+ALTER TABLE customers MODIFY fist_name VARCHAR(50) NOT NULL;
+ALTER TABLE customers MODIFY fist_name VARCHAR(50) NOT NULL DEFAULT '';
+SHOW CREATE TABLE customers;
+ALTER TABLE customers MODIFY fist_name VARCHAR(50) DEFAULT '';
+UPDATE customers SET fist_name='' WHERE fist_name IS NULL;
+
+INSERT INTO orders (fk_customer_id, order_date, order_status) 
+       VALUES (1, '2022-09-08', 2);
+INSERT INTO orders (fk_customer_id, order_date, order_status) 
+       VALUES (1, '2022-12-08', 2);
