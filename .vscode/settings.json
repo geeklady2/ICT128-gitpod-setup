@@ -8,5 +8,6 @@
     ".dockerignore": true,
     ".gitignore": true,
     ".gitpod.yml": true,
+    ".editorconfig": true
   }
 }
