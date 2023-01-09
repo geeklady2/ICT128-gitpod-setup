@@ -1,0 +1,12 @@
+{
+ // Hide files
+ "files.exclude": {
+    ".gitpod/": true,
+    ".hidden_examples/": true,
+    ".vscode/": true,
+    ".gitpod.Dockerfile": true,
+    ".dockerignore": true,
+    ".gitignore": true,
+    ".gitpod.yml": true,
+  }
+}
