@@ -1,7 +1,7 @@
 --
 -- Create a database to do our work in today
-CREATE DATABASE class4;
-USE class4;
+CREATE DATABASE ORDERS;
+USE ORDERS;
 
 --
 -- Create a table for customer information
