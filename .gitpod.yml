@@ -3,7 +3,7 @@ image:
 
 tasks:
   - init: 'echo "TODO: Replace with init/build command"'
-    command: 'mysql <./hidden_examples/mysqlsampledatabase.sql'
+    command: 'mysql < .hidden_examples/mysqlsampledatabase.sql'
 
 ports:
   - port: 3306
