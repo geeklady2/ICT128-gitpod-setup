@@ -1,3 +1,5 @@
+/* ICT 128i 003 - Class 3 example - DDL Creating Databases and Tables */
+
 /* Step 1. Create a database to store information */
 SHOW DATABASES;
 CREATE DATABASE schools;
@@ -61,9 +63,16 @@ SELECT * FROM universities;
 /* Add another column to the table on your own */
 
 
-/* Step 8. Clean-up. Delete the Table and database */
+/* Step 8. Remove the table
+    WARNING this delete a table and all of the data in the table
+*/
 DROP TABLE universities;
 SHOW TABLES;
 
+/* Step 9. Remove the database
+WARNING this delete the whole schools database, all the table in 
+        the database and all of the data, everything that can be
+        found in the database.
+*/
 DROP DATABASE schools;
 SHOW DATABASES;

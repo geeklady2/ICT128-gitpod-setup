@@ -1,3 +1,5 @@
+/* ICT 128i 003 - Class 3 example - DDL Second exampe of Creating Databases and Tables */
+
 CREATE DATABASE POLITICS;
 
 USE POLITICS;
